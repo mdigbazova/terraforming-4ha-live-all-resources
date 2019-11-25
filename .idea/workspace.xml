@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dbd1c28c-c7c0-4521-ad73-16c6a48cee94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alb.tf" beforeDir="false" afterPath="$PROJECT_DIR$/alb.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sg.tf" beforeDir="false" afterPath="$PROJECT_DIR$/sg.tf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
