@@ -12,7 +12,7 @@
 //                          aws_security_group.sg-dev.id,
 //                          "sg-0d455927f565f6a36",
 //                          "sg-0ee21bbccb99a6303",
-//                          "sg-0f853479131f7a43f",
+//                          aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f",
 //                          "sg-0ff93c0812b9c9bd3"
 //                          ]
 //        self            = false
@@ -31,7 +31,7 @@
 resource "aws_security_group" "sg-digitoll-client-erp-dev-ecs" {
     // sg-00be0cac9b44224bd
     name                = "digitoll-client-erp-dev-ecs"
-    description         = "sg-digitoll-client-erp-dev-ecs created on 2019-07-10T16:29:14.267Z"
+    description         = "digitoll-client-erp-dev-ecs created on 2019-07-10T16:29:14.267Z"
     vpc_id              = aws_vpc.vpc-ha-dev.id
 
     ingress {
@@ -55,7 +55,7 @@ resource "aws_security_group" "sg-digitoll-client-erp-dev-ecs" {
 resource "aws_security_group" "sg-digitoll-srv-erp-petrol-dev-elb" {
     // sg-00d6b592122fc9f6a
     name                = "digitoll-srv-erp-petrol-dev-elb"
-    description         = "sg-digitoll-srv-erp-petrol-dev-elb created on 2019-11-01T09:11:27.361+02:00"
+    description         = "digitoll-srv-erp-petrol-dev-elb created on 2019-11-01T09:11:27.361+02:00"
     vpc_id              = aws_vpc.vpc-ha-dev.id
 
     ingress {
@@ -65,7 +65,7 @@ resource "aws_security_group" "sg-digitoll-srv-erp-petrol-dev-elb" {
         cidr_blocks     = ["10.120.0.98/32"]
         security_groups = [
                         aws_security_group.sg-dev.id, // sg-dev
-                        "sg-0f853479131f7a43f"
+                        aws_security_group.sg-dev-vpn-gateway.id // sg-dev-vpn-gateway
                         ]
         self            = false
     }
@@ -148,7 +148,10 @@ resource "aws_security_group" "sg-digitoll-services-erp-acc-elb" {
         from_port       = 443
         to_port         = 443
         protocol        = "tcp"
-        security_groups = ["sg-046ad84adac6dac2e", "sg-0f853479131f7a43f"]
+        security_groups = [
+                        "sg-046ad84adac6dac2e",
+                        aws_security_group.sg-dev-vpn-gateway.id //sg-dev-vpn-gateway
+                        ]
         self            = false
     }
 
@@ -174,7 +177,7 @@ resource "aws_security_group" "sg-digitoll-services-erp-tt-dev-elb" {
         protocol        = "tcp"
         security_groups = [
                         aws_security_group.sg-dev.id,  // sg-dev
-                        "sg-0f853479131f7a43f"
+                        aws_security_group.sg-dev-vpn-gateway.id //sg-dev-vpn-gateway
                         ]
         self            = false
     }
@@ -202,7 +205,7 @@ resource "aws_security_group" "sg-digitoll-services-erp-dev-elb" {
         security_groups = [
                           "sg-051ea12897f00a26e",
                             aws_security_group.sg-dev.id,  // sg-dev
-                          "sg-0f853479131f7a43f"
+                            aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
                           ]
         self            = false
     }
@@ -227,7 +230,7 @@ resource "aws_security_group" "sg-digitoll-client-erp-acc-elb" {
         from_port       = 80
         to_port         = 80
         protocol        = "tcp"
-        security_groups = ["sg-0f853479131f7a43f"]
+        security_groups = [aws_security_group.sg-dev-vpn-gateway.id] //"sg-0f853479131f7a43f"]
         self            = false
     }
 
@@ -235,7 +238,7 @@ resource "aws_security_group" "sg-digitoll-client-erp-acc-elb" {
         from_port       = 443
         to_port         = 443
         protocol        = "tcp"
-        security_groups = ["sg-0f853479131f7a43f"]
+        security_groups = [aws_security_group.sg-dev-vpn-gateway.id] //"sg-0f853479131f7a43f"]
         self            = false
     }
 
@@ -261,7 +264,7 @@ resource "aws_security_group" "sg-digitoll-services-rest-load-balancer" {
         protocol        = "tcp"
         security_groups = [
                             aws_security_group.sg-dev.id, // sg-dev
-                        "sg-0f853479131f7a43f"
+                            aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
                           ]
         self            = false
     }
@@ -360,7 +363,7 @@ resource "aws_security_group" "sg-digitoll-client-dev-elb" {
         protocol        = "tcp"
         security_groups = [
                             aws_security_group.sg-dev.id,  // sg-dev
-                            "sg-0f853479131f7a43f"
+                            aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
                           ]
         self            = false
     }
@@ -371,8 +374,8 @@ resource "aws_security_group" "sg-digitoll-client-dev-elb" {
         protocol        = "tcp"
         security_groups = [
                             aws_security_group.sg-dev.id,  // sg-dev
-                            "sg-0f853479131f7a43f"
-                            ]
+                            aws_security_group.sg-dev-vpn-gateway.id // "sg-0f853479131f7a43f"
+                          ]
         self            = false
     }
 
@@ -476,7 +479,7 @@ resource "aws_security_group" "sg-digitoll-client-dev-elb" {
 //        security_groups = [
 //                          aws_security_group.sg-dev.id, // sg-dev
 //                          "sg-0d455927f565f6a36",
-//                          "sg-0f853479131f7a43f"
+//                          aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
 //                          ]
 //        self            = false
 //    }
@@ -488,7 +491,7 @@ resource "aws_security_group" "sg-digitoll-client-dev-elb" {
 //        security_groups = [
 //                          aws_security_group.sg-dev.id,  // sg-dev
 //                          "sg-0d455927f565f6a36",
-//                          "sg-0f853479131f7a43f"
+//                          aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
 //                          ]
 //        self            = false
 //    }
@@ -615,7 +618,7 @@ resource "aws_security_group" "sg-digitoll-services-erp-ct-dev-ecs" {
 //        cidr_blocks     = ["10.65.1.12/32"]
 //        security_groups = [
 //                          aws_security_group.sg-dev.id,  // sg-dev
-//                          "sg-0f853479131f7a43f"
+//                          aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
 //                          ]
 //        self            = false
 //    }
@@ -673,7 +676,7 @@ resource "aws_security_group" "sg-digitoll-srv-erp-telenor-dev-elb" {
         cidr_blocks     = ["172.17.2.100/32"]
         security_groups = [
                             aws_security_group.sg-dev.id, // sg-dev
-                            "sg-0f853479131f7a43f"
+                            aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
                           ]
         self            = false
     }
@@ -753,7 +756,7 @@ resource "aws_security_group" "sg-dev-eu-central-1b-db" {
         from_port       = 22
         to_port         = 22
         protocol        = "tcp"
-        security_groups = ["sg-0f853479131f7a43f"]
+        security_groups = [aws_security_group.sg-dev-vpn-gateway.id] //"sg-0f853479131f7a43f"]
         self            = false
     }
 
@@ -771,7 +774,7 @@ resource "aws_security_group" "sg-dev-eu-central-1b-db" {
                             "sg-0ece57bb222c09e3a",
                             "sg-0ee21bbccb99a6303",
                             "sg-0f6c897c8f8701e87",
-                            "sg-0f853479131f7a43f"
+                            aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
                           ]
         self            = false
     }
@@ -838,7 +841,7 @@ resource "aws_security_group" "sg-dev" {
                           "sg-0ece57bb222c09e3a", //digitoll-services-erp-tt-dev-ecs
                           //"sg-0ee21bbccb99a6303", //digitoll-services-rest-prod-esc
                           "sg-0f6c897c8f8701e87", //digitoll-services-erp-dev-ecs
-                          "sg-0f853479131f7a43f" //dev-vpn-gateway
+                          aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f" //dev-vpn-gateway
                           ]
         self            = false
     }
@@ -913,7 +916,7 @@ resource "aws_security_group" "sg-digitoll-client-erp-dev-elb" {
         protocol        = "tcp"
         security_groups = [
                             aws_security_group.sg-dev.id, // sg-dev
-                            "sg-0f853479131f7a43f"
+                            aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
                           ]
         self            = false
     }
@@ -924,7 +927,7 @@ resource "aws_security_group" "sg-digitoll-client-erp-dev-elb" {
         protocol        = "tcp"
         security_groups = [
                             aws_security_group.sg-dev.id,  // sg-dev
-                            "sg-0f853479131f7a43f"
+                            aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
                           ]
         self            = false
     }
@@ -976,7 +979,7 @@ resource "aws_security_group" "sg-dev-petrol-eu-central-1a-test" {
         from_port       = 22
         to_port         = 22
         protocol        = "tcp"
-        security_groups = ["sg-0f853479131f7a43f"]
+        security_groups = [aws_security_group.sg-dev-vpn-gateway.id] //"sg-0f853479131f7a43f"]
         self            = false
     }
 
@@ -1036,7 +1039,7 @@ resource "aws_security_group" "sg-digitoll-client-dev-ecs" {
 //        to_port         = 22
 //        protocol        = "tcp"
 //        cidr_blocks     = ["77.70.87.28/32"]
-//        security_groups = ["sg-0f853479131f7a43f"]
+//        security_groups = [aws_security_group.sg-dev-vpn-gateway.id] //"sg-0f853479131f7a43f"]
 //        self            = false
 //    }
 //
@@ -1161,7 +1164,7 @@ resource "aws_security_group" "sg-digitoll-services-erp-ct-dev-elb" {
         cidr_blocks     = ["10.65.2.34/32"]
         security_groups = [
                             aws_security_group.sg-dev.id,  // sg-dev
-                            "sg-0f853479131f7a43f"
+                            aws_security_group.sg-dev-vpn-gateway.id //"sg-0f853479131f7a43f"
                           ]
         self            = false
     }
@@ -1220,7 +1223,7 @@ resource "aws_security_group" "sg-dev-vpn-gateway" {
 //        to_port         = 22
 //        protocol        = "tcp"
 //        cidr_blocks     = ["77.70.87.28/32"]
-//        security_groups = ["sg-0f853479131f7a43f"]
+//        security_groups = [aws_security_group.sg-dev-vpn-gateway.id] //"sg-0f853479131f7a43f"]
 //        self            = false
 //    }
 //
