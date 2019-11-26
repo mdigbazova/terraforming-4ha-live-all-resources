@@ -4,6 +4,6 @@
 //}
 
 output "subnet_security" {
-  value       = aws_security_group.subnetsecurity.arn
-  description = "The ARN of the Subnet security"
+  value       = aws_security_group.sg-dev-vpn-gateway.name
+  description = "The ARN or name of the Subnet security"
 }
