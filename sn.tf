@@ -310,7 +310,7 @@ resource "aws_subnet" "subnet-dev-tt-eu-central-1c" {
     }
 }
 
-//resource "aws_subnet" "" {
+//resource "aws_subnet" "subnet-prod-db-eu-central-1b" {
 //    // -05f5fc175b72f3ff3
 //    vpc_id                  = aws_vpc.vpc-ha-dev.id
 //    cidr_block              = "172.31.129.0/24"
@@ -370,7 +370,7 @@ resource "aws_subnet" "subnet-dev-client-erp-eu-central-1a" {
     }
 }
 
-resource "aws_subnet" "subnet-dev-eu-central1-c" {
+resource "aws_subnet" "subnet-dev-eu-central-1c" {
     // -0498063aae51b2e6e
     vpc_id                  = aws_vpc.vpc-ha-dev.id
     cidr_block              = "172.31.0.0/23"

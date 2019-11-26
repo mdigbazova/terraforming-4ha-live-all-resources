@@ -47,6 +47,14 @@ resource "aws_eip" "eipalloc-" { // 0d0e0a280ae383cde
 //}
 
 ////////
+//Single EIP associated with an instance:
+//
+//resource "aws_eip" "lb" {
+//instance = "${aws_instance.web.id}"
+//vpc      = true
+//}
+//
+//Multiple EIPs associated with a single network interface:
 //resource "aws_network_interface" "multi-ip" {
 //    subnet_id   = "${aws_subnet.main.id}"
 //    private_ips = ["10.0.0.10", "10.0.0.11"]
