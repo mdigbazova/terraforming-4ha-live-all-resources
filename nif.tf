@@ -74,14 +74,12 @@ resource "aws_network_interface" "eni-dev-eu-central-1a-2" { // 0c74dc0a05a2484a
 //    source_dest_check = true
 //}
 
-// I couldn't find it in the page of Network Interfaces ???
-//resource "aws_network_interface" "eni-dev-nat-eu-central-1a" { // 0f0dcad22b5aed19d
-//    subnet_id         = aws_subnet.subnet-dev-nat-eu-central-1a.id // "subnet-09101cb3af5e1772a"
-//    private_ips       = ["172.31.112.219"]
-//    security_groups   = []
-//    source_dest_check = false
-//}
-// end of : I couldn't find it in the page of Network Interfaces ???
+resource "aws_network_interface" "eni-dev-nat-eu-central-1a" { // 0f0dcad22b5aed19d
+    subnet_id = aws_subnet.subnet-dev-nat-eu-central-1a.id // "subnet-09101cb3af5e1772a"
+    private_ips = ["172.31.112.219"]
+    security_groups = []
+    source_dest_check = false
+}
 
 //resource "aws_network_interface" "eni-prod-nat-eu-central-1c-1" { // 0166996748edafc20
 //    subnet_id         = aws_subnet.subnet-prod-nat-eu-central-1c.id // "subnet-0a200842ca18a10db"
