@@ -4,12 +4,15 @@
     <list default="true" id="dbd1c28c-c7c0-4521-ad73-16c6a48cee94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iamp.tf" beforeDir="false" afterPath="$PROJECT_DIR$/iamp.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iampa.tf" beforeDir="false" afterPath="$PROJECT_DIR$/iampa.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iamr.tf" beforeDir="false" afterPath="$PROJECT_DIR$/iamr.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iamrp.tf" beforeDir="false" afterPath="$PROJECT_DIR$/iamrp.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/igw.tf" beforeDir="false" afterPath="$PROJECT_DIR$/igw.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kmsk.tf" beforeDir="false" afterPath="$PROJECT_DIR$/kmsk.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nacl.tf" beforeDir="false" afterPath="$PROJECT_DIR$/nacl.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nat.tf" beforeDir="false" afterPath="$PROJECT_DIR$/nat.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/outputs.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r53r.tf" beforeDir="false" afterPath="$PROJECT_DIR$/r53r.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r53z.tf" beforeDir="false" afterPath="$PROJECT_DIR$/r53z.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt.tf" beforeDir="false" afterPath="$PROJECT_DIR$/rt.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vgw.tf" beforeDir="false" afterPath="$PROJECT_DIR$/vgw.tf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

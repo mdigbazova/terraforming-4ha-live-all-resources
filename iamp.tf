@@ -240,29 +240,29 @@ POLICY
 //POLICY
 //}
 
-resource "aws_iam_policy" "AWSLambdaEdgeExecutionRole" { // -84d3bd86-8ca4-4251-9393-9d3bdd7d928e
-    name        = "AWSLambdaEdgeExecutionRole" // -84d3bd86-8ca4-4251-9393-9d3bdd7d928e
-    path        = "/service-role/"
-    description = ""
-    policy      = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource": [
-        "arn:aws:logs:*:*:*"
-      ]
-    }
-  ]
-}
-POLICY
-}
+//resource "aws_iam_policy" "AWSLambdaEdgeExecutionRole" { // -84d3bd86-8ca4-4251-9393-9d3bdd7d928e
+//    name        = "AWSLambdaEdgeExecutionRole" // -84d3bd86-8ca4-4251-9393-9d3bdd7d928e
+//    path        = "/service-role/"
+//    description = ""
+//    policy      = <<POLICY
+//{
+//  "Version": "2012-10-17",
+//  "Statement": [
+//    {
+//      "Effect": "Allow",
+//      "Action": [
+//        "logs:CreateLogGroup",
+//        "logs:CreateLogStream",
+//        "logs:PutLogEvents"
+//      ],
+//      "Resource": [
+//        "arn:aws:logs:*:*:*"
+//      ]
+//    }
+//  ]
+//}
+//POLICY
+//}
 
 resource "aws_iam_policy" "DigitollServicesErpTtDevSecrets" {
     //acc: 393305049144

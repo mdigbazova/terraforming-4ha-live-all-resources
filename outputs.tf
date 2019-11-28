@@ -3,7 +3,7 @@
 //  description = "The ARN of the S3 bucket"
 //}
 
-output "subnet_security" {
+output "subnet_security-gw" {
   value       = aws_security_group.sg-dev-vpn-gateway.name
-  description = "The ARN or name of the Subnet security"
+  description = "The name of the Subnet security Dev Gateway"
 }
