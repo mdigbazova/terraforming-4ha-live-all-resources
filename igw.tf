@@ -1,7 +1,8 @@
-resource "aws_internet_gateway" "igw-327e6a5a" {
-    vpc_id = "vpc-c05e4fab"
+resource "aws_internet_gateway" "igw-1" {
+    vpc_id = aws_vpc.vpc-ha-dev.id //"vpc-c05e4fab"
 
-    tags {
+    tags = {
+        "Name" = "dev-gateway"
     }
 }
 

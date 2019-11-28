@@ -245,46 +245,46 @@ resource "aws_iam_role" "AWSServiceRoleForTrustedAdvisor" {
 POLICY
 }
 
-resource "aws_iam_role" "digitoll-db-prod-MongoDBNodeIAMRole-WK6F98IW546G" {
-    name               = "digitoll-db-prod-MongoDBNodeIAMRole-WK6F98IW546G"
-    path               = "/"
-    assume_role_policy = <<POLICY
-{
-  "Version": "2008-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-POLICY
-}
-
-resource "aws_iam_role" "digitoll-services-rest-viewer-response-prod" {
-    name               = "digitoll-services-rest-viewer-response-prod"
-    path               = "/service-role/"
-    assume_role_policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": [
-          "edgelambda.amazonaws.com",
-          "lambda.amazonaws.com"
-        ]
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-POLICY
-}
+//resource "aws_iam_role" "digitoll-db-prod-MongoDBNodeIAMRole-WK6F98IW546G" {
+//    name               = "digitoll-db-prod-MongoDBNodeIAMRole-WK6F98IW546G"
+//    path               = "/"
+//    assume_role_policy = <<POLICY
+//{
+//  "Version": "2008-10-17",
+//  "Statement": [
+//    {
+//      "Effect": "Allow",
+//      "Principal": {
+//        "Service": "ec2.amazonaws.com"
+//      },
+//      "Action": "sts:AssumeRole"
+//    }
+//  ]
+//}
+//POLICY
+//}
+//
+//resource "aws_iam_role" "digitoll-services-rest-viewer-response-prod" {
+//    name               = "digitoll-services-rest-viewer-response-prod"
+//    path               = "/service-role/"
+//    assume_role_policy = <<POLICY
+//{
+//  "Version": "2012-10-17",
+//  "Statement": [
+//    {
+//      "Effect": "Allow",
+//      "Principal": {
+//        "Service": [
+//          "edgelambda.amazonaws.com",
+//          "lambda.amazonaws.com"
+//        ]
+//      },
+//      "Action": "sts:AssumeRole"
+//    }
+//  ]
+//}
+//POLICY
+//}
 
 resource "aws_iam_role" "DigitollServicesErpAccEcs" {
     name               = "DigitollServicesErpAccEcs"
@@ -326,25 +326,25 @@ resource "aws_iam_role" "DigitollServicesErpCtDevSecrets" {
 POLICY
 }
 
-resource "aws_iam_role" "DigitollServicesErpCtProdEcs" {
-    name               = "DigitollServicesErpCtProdEcs"
-    path               = "/"
-    assume_role_policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "ecs-tasks.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-POLICY
-}
+//resource "aws_iam_role" "DigitollServicesErpCtProdEcs" {
+//    name               = "DigitollServicesErpCtProdEcs"
+//    path               = "/"
+//    assume_role_policy = <<POLICY
+//{
+//  "Version": "2012-10-17",
+//  "Statement": [
+//    {
+//      "Sid": "",
+//      "Effect": "Allow",
+//      "Principal": {
+//        "Service": "ecs-tasks.amazonaws.com"
+//      },
+//      "Action": "sts:AssumeRole"
+//    }
+//  ]
+//}
+//POLICY
+//}
 
 resource "aws_iam_role" "DigitollServicesErpDevEcs" {
     name               = "DigitollServicesErpDevEcs"
@@ -386,25 +386,25 @@ resource "aws_iam_role" "DigitollServicesErpPetrolDevEcs" {
 POLICY
 }
 
-resource "aws_iam_role" "DigitollServicesErpProdEcs" {
-    name               = "DigitollServicesErpProdEcs"
-    path               = "/"
-    assume_role_policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "ecs-tasks.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-POLICY
-}
+//resource "aws_iam_role" "DigitollServicesErpProdEcs" {
+//    name               = "DigitollServicesErpProdEcs"
+//    path               = "/"
+//    assume_role_policy = <<POLICY
+//{
+//  "Version": "2012-10-17",
+//  "Statement": [
+//    {
+//      "Sid": "",
+//      "Effect": "Allow",
+//      "Principal": {
+//        "Service": "ecs-tasks.amazonaws.com"
+//      },
+//      "Action": "sts:AssumeRole"
+//    }
+//  ]
+//}
+//POLICY
+//}
 
 resource "aws_iam_role" "DigitollServicesErpTelenorDevEcs" {
     name               = "DigitollServicesErpTelenorDevEcs"
@@ -466,25 +466,25 @@ resource "aws_iam_role" "DigitollServicesRestDevEcs" {
 POLICY
 }
 
-resource "aws_iam_role" "DigitollServicesRestProdEcs" {
-    name               = "DigitollServicesRestProdEcs"
-    path               = "/"
-    assume_role_policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "ecs-tasks.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-POLICY
-}
+//resource "aws_iam_role" "DigitollServicesRestProdEcs" {
+//    name               = "DigitollServicesRestProdEcs"
+//    path               = "/"
+//    assume_role_policy = <<POLICY
+//{
+//  "Version": "2012-10-17",
+//  "Statement": [
+//    {
+//      "Sid": "",
+//      "Effect": "Allow",
+//      "Principal": {
+//        "Service": "ecs-tasks.amazonaws.com"
+//      },
+//      "Action": "sts:AssumeRole"
+//    }
+//  ]
+//}
+//POLICY
+//}
 
 resource "aws_iam_role" "ecsAutoscaleRole" {
     name               = "ecsAutoscaleRole"

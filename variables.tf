@@ -4,6 +4,19 @@ variable "region" {
   type        = "string"
 }
 
+variable "username" {
+  description = "The username"
+  default     = "m.digbazova"
+  type        = "string"
+}
+
+//534685708436
+variable "account-name" {
+  description = "Account name"
+  default     = "534685708436"
+  type        = "string"
+}
+
 //variable "environment" {
 //  description = "The name of the deployment environment."
 //  default     = "dev"

@@ -1,4 +1,4 @@
-resource "aws_kms_key" "cac230cb-a9d4-4f99-8ade-45828e4d7073" {
+resource "aws_kms_key" "key-protecting-rds-db" {//cac230cb-a9d4-4f99-8ade-45828e4d7073
     description             = "Default master key that protects my RDS database volumes when no other key is defined"
     key_usage               = "ENCRYPT_DECRYPT"
     is_enabled              = true
@@ -18,7 +18,7 @@ resource "aws_kms_key" "cac230cb-a9d4-4f99-8ade-45828e4d7073" {
     "Resource" : "*",
     "Condition" : {
       "StringEquals" : {
-        "kms:CallerAccount" : "393305049144",
+        "kms:CallerAccount" : "${var.account-name}",
         "kms:ViaService" : "rds.eu-central-1.amazonaws.com"
       }
     }
@@ -26,7 +26,7 @@ resource "aws_kms_key" "cac230cb-a9d4-4f99-8ade-45828e4d7073" {
     "Sid" : "Allow direct access to key metadata to the account",
     "Effect" : "Allow",
     "Principal" : {
-      "AWS" : "arn:aws:iam::393305049144:root"
+      "AWS" : "arn:aws:iam::"${var.account-name}":root"
     },
     "Action" : [ "kms:Describe*", "kms:Get*", "kms:List*", "kms:RevokeGrant" ],
     "Resource" : "*"
