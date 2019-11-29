@@ -89,7 +89,7 @@ resource "aws_instance" "dev-eu-central-1b-db" {
     monitoring                  = false
     key_name                    = "dev-eu-central-1b-db"
     subnet_id                   = aws_subnet.subnet-instances.id //"subnet-13a5916e"
-    vpc_security_group_ids      = aws_security_group.sg-dev-eu-central-1b-db.id //["sg-08f0e1316ff276e2e"]
+    vpc_security_group_ids      = [aws_security_group.sg-dev-eu-central-1b-db.id] //["sg-08f0e1316ff276e2e"]
     associate_public_ip_address = true
     private_ip                  = "172.31.43.222"
     source_dest_check           = true
