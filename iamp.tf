@@ -1,6 +1,6 @@
 // account in Dev 534685708436
 resource "aws_iam_policy" "DigitollServicesErpCtDevSecrets" {
-    //// ??? todo
+    ////   // -G5n4gp
     name        = "DigitollServicesErpCtDevSecrets"
     path        = "/"
     description = ""
@@ -14,7 +14,7 @@ resource "aws_iam_policy" "DigitollServicesErpCtDevSecrets" {
         "secretsmanager:GetSecretValue"
       ],
       "Resource": [
-        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-ct-dev-G5n4gp"
+        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-ct-dev".arn
       ]
     }
   ]
@@ -76,7 +76,7 @@ POLICY
 //}
 
 resource "aws_iam_policy" "DigitollServicesErpDevSecrets" {
-    // acc: 393305049144
+    // acc: 393305049144  // -cV4llg
     name        = "DigitollServicesErpDevSecrets"
     path        = "/"
     description = ""
@@ -90,7 +90,7 @@ resource "aws_iam_policy" "DigitollServicesErpDevSecrets" {
         "secretsmanager:GetSecretValue"
       ],
       "Resource": [
-        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-dev-cV4llg"
+        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-dev".arn
       ]
     }
   ]
@@ -99,7 +99,7 @@ POLICY
 }
 
 resource "aws_iam_policy" "DigitollServicesErpTelenorDevSecrets" {
-    // acc:393305049144
+    // acc:393305049144  // -8YImon
     name        = "DigitollServicesErpTelenorDevSecrets"
     path        = "/"
     description = ""
@@ -113,7 +113,7 @@ resource "aws_iam_policy" "DigitollServicesErpTelenorDevSecrets" {
         "secretsmanager:GetSecretValue"
       ],
       "Resource": [
-        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-telenor-dev-8YImon"
+        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-telenor-dev".arn
       ]
     }
   ]
@@ -153,7 +153,7 @@ POLICY
 //}
 
 resource "aws_iam_policy" "DigitollServicesRestDevSecrets" {
-    // account:393305049144
+    // account:393305049144  // -mDOeXL
     name        = "DigitollServicesRestDevSecrets"
     path        = "/"
     description = ""
@@ -167,7 +167,7 @@ resource "aws_iam_policy" "DigitollServicesRestDevSecrets" {
         "secretsmanager:GetSecretValue"
       ],
       "Resource": [
-        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-rest-dev-mDOeXL"
+        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-rest-dev".arn
       ]
     }
   ]
@@ -265,7 +265,7 @@ POLICY
 //}
 
 resource "aws_iam_policy" "DigitollServicesErpTtDevSecrets" {
-    //acc: 393305049144
+    //acc: 393305049144 // -4d6Qyz
     name        = "DigitollServicesErpTtDevSecrets"
     path        = "/"
     description = ""
@@ -279,7 +279,7 @@ resource "aws_iam_policy" "DigitollServicesErpTtDevSecrets" {
         "secretsmanager:GetSecretValue"
       ],
       "Resource": [
-        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-tt-dev-4d6Qyz"
+        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-tt-dev".arn
       ]
     }
   ]
@@ -288,7 +288,7 @@ POLICY
 }
 
 resource "aws_iam_policy" "DigitollServicesErpAccSecrets" {
-    // account: 393305049144
+    // account: 393305049144  // -X6mZNg
     name        = "DigitollServicesErpAccSecrets"
     path        = "/"
     description = ""
@@ -302,7 +302,7 @@ resource "aws_iam_policy" "DigitollServicesErpAccSecrets" {
         "secretsmanager:GetSecretValue"
       ],
       "Resource": [
-        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-acc-X6mZNg"
+        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-acc".arn
       ]
     }
   ]
@@ -416,7 +416,8 @@ POLICY
 //}
 
 resource "aws_iam_policy" "DigitollServicesErpPetrolDevSecrets" {
-    // 393305049144
+    // 393305049144 // -Hie7ic
+    // policy_arn = "${aws_iam_policy.policy.arn}"
     name        = "DigitollServicesErpPetrolDevSecrets"
     path        = "/"
     description = ""
@@ -430,7 +431,7 @@ resource "aws_iam_policy" "DigitollServicesErpPetrolDevSecrets" {
         "secretsmanager:GetSecretValue"
       ],
       "Resource": [
-        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-petrol-dev-Hie7ic"
+        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-petrol-dev".arn
       ]
     }
   ]
