@@ -1,3 +1,5 @@
+// account on AWS PROD: 393305049144
+// account on AWS DEV : 534685708436
 variable "region" {
   description = "The region where AWS operations will take place"
   default     = "eu-central-1"

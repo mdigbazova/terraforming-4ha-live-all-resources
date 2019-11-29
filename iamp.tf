@@ -90,7 +90,7 @@ resource "aws_iam_policy" "DigitollServicesErpDevSecrets" {
         "secretsmanager:GetSecretValue"
       ],
       "Resource": [
-        "arn:aws:secretsmanager:eu-central-1::secret:/secret/digitoll-services-erp-dev-cV4llg"
+        "arn:aws:secretsmanager:eu-central-1:${var.account-name}:secret:/secret/digitoll-services-erp-dev-cV4llg"
       ]
     }
   ]
