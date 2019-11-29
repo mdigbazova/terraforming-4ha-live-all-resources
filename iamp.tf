@@ -1,4 +1,5 @@
 // account in Dev 534685708436
+// ${aws:username}
 resource "aws_iam_policy" "DigitollServicesErpCtDevSecrets" {
     ////   // -G5n4gp
     name        = "DigitollServicesErpCtDevSecrets"
@@ -336,7 +337,7 @@ resource "aws_iam_policy" "AllowIndividualUserToManageTheirOwnMFA" {
       ],
       "Resource": [
         "arn:aws:iam::*:mfa/*",
-        "arn:aws:iam::*:user/${aws:username}"
+        "arn:aws:iam::*:user/aws:username"
       ]
     },
     {
@@ -349,8 +350,8 @@ resource "aws_iam_policy" "AllowIndividualUserToManageTheirOwnMFA" {
         "iam:ResyncMFADevice"
       ],
       "Resource": [
-        "arn:aws:iam::*:mfa/${aws:username}",
-        "arn:aws:iam::*:user/${aws:username}
+        "arn:aws:iam::*:mfa/aws:username",
+        "arn:aws:iam::*:user/aws:username"
       ]
     },
     {
@@ -360,8 +361,8 @@ resource "aws_iam_policy" "AllowIndividualUserToManageTheirOwnMFA" {
         "iam:DeactivateMFADevice"
       ],
       "Resource": [
-        "arn:aws:iam::*:mfa/${aws:username}",
-        "arn:aws:iam::*:user/${aws:username}"
+        "arn:aws:iam::*:mfa/aws:username",
+        "arn:aws:iam::*:user/aws:username"
       ],
       "Condition": {
         "Bool": {

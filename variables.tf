@@ -3,20 +3,20 @@
 variable "region" {
   description = "The region where AWS operations will take place"
   default     = "eu-central-1"
-  type        = "string"
+  type        = string
 }
 
 variable "username" {
   description = "The username"
   default     = "m.digbazova"
-  type        = "string"
+  type        = string
 }
 
 //534685708436
 variable "account-name" {
   description = "Account name"
   default     = "534685708436"
-  type        = "string"
+  type        = string
 }
 
 //variable "environment" {
